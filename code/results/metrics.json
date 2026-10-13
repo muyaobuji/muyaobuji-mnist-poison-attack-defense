@@ -1,0 +1,14 @@
+{
+  "stage": "attack",
+  "train_size": 8000,
+  "test_size": 2000,
+  "poison_rate_limit": 0.05,
+  "poison_budget": 400,
+  "n_modified": 400,
+  "actual_poison_rate": 0.05,
+  "acc_clean": 0.9395,
+  "acc_attack": 0.8585,
+  "untargeted_asr": 0.08621607237892492,
+  "attack_success": true,
+  "delta": 0.05
+}

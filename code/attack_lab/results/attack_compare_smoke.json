@@ -1,0 +1,38 @@
+{
+  "acc_clean": 0.9395,
+  "model": "mlp",
+  "budget": 400,
+  "seed": 42,
+  "records": [
+    {
+      "method": "centroid_nearest_flip",
+      "note": "翻转到类内均值模板最近类",
+      "acc_clean": 0.9395,
+      "acc_attack": 0.9255,
+      "accuracy_drop": 0.014000000000000012,
+      "untargeted_asr": 0.014901543374135191,
+      "attack_success": false,
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.0,
+      "t_eval_s": 3.85
+    },
+    {
+      "method": "random_label_flip",
+      "note": "随机标签翻转 Baseline",
+      "acc_clean": 0.9395,
+      "acc_attack": 0.9265,
+      "accuracy_drop": 0.013000000000000012,
+      "untargeted_asr": 0.013837147418839821,
+      "attack_success": false,
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.0,
+      "t_eval_s": 3.27
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "model": "knn1",
+  "acc_clean": 0.941,
+  "results": {
+    "test_info|held-out(未见过的测试集)": {
+      "acc_clean": 0.944,
+      "acc_attack": 1.0,
+      "asr": 0.0
+    },
+    "test_info|基准 test.npz": {
+      "acc_clean": 0.941,
+      "acc_attack": 0.8805,
+      "asr": 0.06429330499468651
+    },
+    "synth|held-out(未见过的测试集)": {
+      "acc_clean": 0.944,
+      "acc_attack": 1.0,
+      "asr": 0.0
+    },
+    "synth|基准 test.npz": {
+      "acc_clean": 0.941,
+      "acc_attack": 0.876,
+      "asr": 0.06907545164718379
+    }
+  }
+}

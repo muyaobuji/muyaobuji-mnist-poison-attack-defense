@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# 大体积的 OpenML 原始缓存（约 44 MB，且有两份重复路径）
+# 仅 attack_lab/strict_split.py 的「完整 70k MNIST」实验需要；
+# 日常基准评测使用内置的 data/train.npz、data/test.npz，无需此缓存。
+code/data/openml/
+code/data/openml
+
+# 实验中间产物
+*.npz
+!code/data/*.npz
+poisoned_*.npz
+defended_*.npz
+
+# 渲染/预览产物
+preview-*/
+*.pdf
+
+# 编辑器与系统
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log

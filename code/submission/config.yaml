@@ -1,0 +1,29 @@
+# MNIST 数据投毒攻击 · 配置（极简 YAML：key: value，支持 # 注释）
+# 默认值即本地 5% 预算下实验选出的最优组合。
+
+# 攻击策略：trap（陷阱投毒，默认）| mixed（陷阱+集中式）| concentrate | label_only
+strategy: trap
+
+# 陷阱图像与目标类样本的混合比例（0=只用模板，1=只用原图）
+blend: 0.35
+
+# 陷阱图像叠加的高斯噪声标准差（提升跨模型泛化）
+sigma: 0.06
+
+# mixed 策略中用于陷阱的预算比例
+trap_ratio: 0.75
+
+# concentrate 策略集中攻击的源类数量
+n_src_concentrate: 1
+
+# 若评测环境在 task 中提供了测试样本图像，是否用来构造定向陷阱
+use_probe_images: true
+
+# 代理模型后端：auto（env > sklearn > numpy）| env | sklearn | numpy
+prefer: auto
+
+# 随机种子（保证可复现）
+seed: 42
+
+# 是否打印调试信息
+verbose: false

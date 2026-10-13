@@ -1,0 +1,17 @@
+{
+  "model": "knn1",
+  "trap": "margin",
+  "acc": {
+    "clean": 1.0,
+    "full(图+标签)": 1.0,
+    "img_only(只改图)": 1.0,
+    "label_only(只改标签)": 1.0
+  },
+  "acc_clean": 1.0,
+  "asr": {
+    "clean": 0.0,
+    "full(图+标签)": 0.0,
+    "img_only(只改图)": 0.0,
+    "label_only(只改标签)": 0.0
+  }
+}

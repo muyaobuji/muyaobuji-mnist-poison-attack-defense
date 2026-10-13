@@ -1,0 +1,394 @@
+{
+  "acc_clean": {
+    "mlp": 0.9395,
+    "centroid": 0.7975,
+    "centroid_l2": 0.8025,
+    "centroid_cos": 0.8025,
+    "knn1": 0.941,
+    "knn3": 0.9435
+  },
+  "eval_models": "mlp,centroid,centroid_l2,centroid_cos,knn1,knn3",
+  "budget": 400,
+  "seed": 42,
+  "poison_rate": 0.05,
+  "records": [
+    {
+      "method": "random_label_flip",
+      "note": "随机标签翻转 Baseline",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.0,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9265,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.013000000000000012,
+          "untargeted_asr": 0.013837147418839821,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.798,
+          "acc_clean": 0.7975,
+          "accuracy_drop": -0.000500000000000056,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.805,
+          "acc_clean": 0.8025,
+          "accuracy_drop": -0.0025000000000000577,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.805,
+          "acc_clean": 0.8025,
+          "accuracy_drop": -0.0025000000000000577,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.891,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04999999999999993,
+          "untargeted_asr": 0.053134962805525966,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.93,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.013499999999999956,
+          "untargeted_asr": 0.01430842607313191,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "image_replacement",
+      "note": "图像替换（clean-label, prefer_far=True）",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 0,
+      "n_image_changed": 400,
+      "t_attack_s": 0.08,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9385,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.0010000000000000009,
+          "untargeted_asr": 0.001064395955295371,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.793,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0044999999999999485,
+          "untargeted_asr": 0.005642633228840061,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.8005,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.0020000000000000018,
+          "untargeted_asr": 0.002492211838006233,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.8005,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.0020000000000000018,
+          "untargeted_asr": 0.002492211838006233,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.9245,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.01649999999999996,
+          "untargeted_asr": 0.01753453772582355,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.9225,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.02100000000000002,
+          "untargeted_asr": 0.022257551669316394,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "replacement_plus_flip",
+      "note": "图像替换 + 标签翻转（prefer_far=True）",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.06,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9295,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.010000000000000009,
+          "untargeted_asr": 0.010643959552953709,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7945,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0030000000000000027,
+          "untargeted_asr": 0.0037617554858934204,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.8035,
+          "acc_clean": 0.8025,
+          "accuracy_drop": -0.0010000000000000009,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.8035,
+          "acc_clean": 0.8025,
+          "accuracy_drop": -0.0010000000000000009,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.908,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.03299999999999992,
+          "untargeted_asr": 0.0350690754516471,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.912,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.03149999999999997,
+          "untargeted_asr": 0.033386327503974536,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "lever_label_flip",
+      "note": "杠杆标签翻转（离本类原型最远优先, target=nearest）",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.06,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.91,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.02949999999999997,
+          "untargeted_asr": 0.031399680681213384,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7955,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0020000000000000018,
+          "untargeted_asr": 0.0025078369905956136,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.8025,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.0,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.8025,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.0,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.913,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.027999999999999914,
+          "untargeted_asr": 0.02975557917109449,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.92,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.023499999999999965,
+          "untargeted_asr": 0.02490726020137781,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "class_pair_swap",
+      "note": "高混淆类对双向标签交换",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.0,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9125,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.027000000000000024,
+          "untargeted_asr": 0.028738690792975013,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.792,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.005499999999999949,
+          "untargeted_asr": 0.006896551724137868,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.7955,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.007000000000000006,
+          "untargeted_asr": 0.008722741433021815,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.7955,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.007000000000000006,
+          "untargeted_asr": 0.008722741433021815,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8915,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04949999999999999,
+          "untargeted_asr": 0.05260361317747077,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.909,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.034499999999999975,
+          "untargeted_asr": 0.036565977742448304,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "influence_lossgrad",
+      "note": "影响力选样（loss_grad, target=nearest）取 top-400",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 2.63,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9145,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.025000000000000022,
+          "untargeted_asr": 0.02660989888238427,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.79,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.007499999999999951,
+          "untargeted_asr": 0.00940438871473348,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.7955,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.007000000000000006,
+          "untargeted_asr": 0.008722741433021815,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.7955,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.007000000000000006,
+          "untargeted_asr": 0.008722741433021815,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8935,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04749999999999999,
+          "untargeted_asr": 0.050478214665249724,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.9155,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.028000000000000025,
+          "untargeted_asr": 0.029676735559088528,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "sel_conf_near",
+      "note": "select=confident target=nearest cap=True",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.0,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9185,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.02100000000000002,
+          "untargeted_asr": 0.022352315061202787,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7845,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.013000000000000012,
+          "untargeted_asr": 0.016300940438871488,
+          "attack_success": false
+        },
+        "centroid_l2": {
+          "acc_attack": 0.7935,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.009000000000000008,
+          "untargeted_asr": 0.011214953271028047,
+          "attack_success": false
+        },
+        "centroid_cos": {
+          "acc_attack": 0.7935,
+          "acc_clean": 0.8025,
+          "accuracy_drop": 0.009000000000000008,
+          "untargeted_asr": 0.011214953271028047,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.888,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.052999999999999936,
+          "untargeted_asr": 0.05632306057385753,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.9115,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.03200000000000003,
+          "untargeted_asr": 0.03391626921038689,
+          "attack_success": false
+        }
+      }
+    }
+  ]
+}

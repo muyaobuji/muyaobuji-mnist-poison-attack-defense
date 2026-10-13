@@ -1,0 +1,5 @@
+# Python 依赖
+# 核心仅需 numpy；scikit-learn 为可选依赖 —— 缺失时框架与提交包会自动
+# 回退到内置的纯 NumPy MLP 实现，功能不受影响。
+numpy>=1.20
+scikit-learn>=1.0   # 可选

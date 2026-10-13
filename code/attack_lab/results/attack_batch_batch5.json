@@ -1,0 +1,438 @@
+{
+  "acc_clean": {
+    "mlp": 0.9395,
+    "knn1": 0.941,
+    "knn3": 0.9435,
+    "knn5": 0.942,
+    "centroid": 0.7975
+  },
+  "eval_models": "mlp,knn1,knn3,knn5,centroid",
+  "budget": 400,
+  "seed": 42,
+  "poison_rate": 0.05,
+  "records": [
+    {
+      "method": "trap_margin_blend0",
+      "note": "kNN 陷阱投毒 rank=margin target=second sigma=0.06 blend=0.0 use_test_img=True",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.04,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.872,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.0675,
+          "untargeted_asr": 0.07184672698243748,
+          "attack_success": true
+        },
+        "knn1": {
+          "acc_attack": 0.764,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.17699999999999994,
+          "untargeted_asr": 0.1880977683315621,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.901,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.04249999999999998,
+          "untargeted_asr": 0.04504504504504503,
+          "attack_success": false
+        },
+        "knn5": {
+          "acc_attack": 0.9215,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.020499999999999963,
+          "untargeted_asr": 0.021762208067940512,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.793,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0044999999999999485,
+          "untargeted_asr": 0.005642633228840061,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "trap_margin_blend3",
+      "note": "kNN 陷阱投毒 rank=margin target=second sigma=0.06 blend=0.3 use_test_img=True",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.04,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.873,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.0665,
+          "untargeted_asr": 0.0707823310271421,
+          "attack_success": true
+        },
+        "knn1": {
+          "acc_attack": 0.749,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.19199999999999995,
+          "untargeted_asr": 0.20403825717321994,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.875,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.0685,
+          "untargeted_asr": 0.07260201377848437,
+          "attack_success": true
+        },
+        "knn5": {
+          "acc_attack": 0.9045,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.03749999999999998,
+          "untargeted_asr": 0.03980891719745221,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.794,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0034999999999999476,
+          "untargeted_asr": 0.004388714733542254,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "trap_margin_blend5",
+      "note": "kNN 陷阱投毒 rank=margin target=second sigma=0.06 blend=0.5 use_test_img=True",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.04,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9065,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.03300000000000003,
+          "untargeted_asr": 0.035125066524747235,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8045,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.13649999999999995,
+          "untargeted_asr": 0.14505844845908603,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.8835,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.06000000000000005,
+          "untargeted_asr": 0.06359300476947541,
+          "attack_success": true
+        },
+        "knn5": {
+          "acc_attack": 0.909,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.03299999999999992,
+          "untargeted_asr": 0.03503184713375788,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.794,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0034999999999999476,
+          "untargeted_asr": 0.004388714733542254,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "trap_conf_blend3",
+      "note": "kNN 陷阱投毒 rank=conf target=second sigma=0.06 blend=0.3 use_test_img=True",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.04,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.8745,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.06499999999999995,
+          "untargeted_asr": 0.06918573709419898,
+          "attack_success": true
+        },
+        "knn1": {
+          "acc_attack": 0.7495,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.1914999999999999,
+          "untargeted_asr": 0.20350690754516462,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.876,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.0675,
+          "untargeted_asr": 0.07154213036565978,
+          "attack_success": true
+        },
+        "knn5": {
+          "acc_attack": 0.9065,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.035499999999999976,
+          "untargeted_asr": 0.03768577494692142,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.792,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.005499999999999949,
+          "untargeted_asr": 0.006896551724137868,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "trap_nndist_blend3",
+      "note": "kNN 陷阱投毒 rank=nndist target=second sigma=0.06 blend=0.3 use_test_img=True",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.11,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.03949999999999998,
+          "untargeted_asr": 0.04204364023416709,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.7485,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.1924999999999999,
+          "untargeted_asr": 0.20456960680127514,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.874,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.0695,
+          "untargeted_asr": 0.07366189719130896,
+          "attack_success": true
+        },
+        "knn5": {
+          "acc_attack": 0.9125,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.02949999999999997,
+          "untargeted_asr": 0.03131634819532906,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.793,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0044999999999999485,
+          "untargeted_asr": 0.005642633228840061,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "trap_labelonly",
+      "note": "kNN 陷阱投毒 rank=margin target=second sigma=0.06 blend=0.0 use_test_img=False",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.03,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.937,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.0024999999999999467,
+          "untargeted_asr": 0.002660989888238368,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8985,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04249999999999998,
+          "untargeted_asr": 0.045164718384697114,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.931,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.012499999999999956,
+          "untargeted_asr": 0.01324854266030732,
+          "attack_success": false
+        },
+        "knn5": {
+          "acc_attack": 0.9395,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.0024999999999999467,
+          "untargeted_asr": 0.0026539278131634254,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.795,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0024999999999999467,
+          "untargeted_asr": 0.003134796238244447,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "mixed_trap70",
+      "note": "混合：陷阱 280 + 集中翻转 39（ratio=0.7）",
+      "n_modified": 319,
+      "poison_rate": 0.039875,
+      "over_budget": false,
+      "n_label_changed": 319,
+      "n_image_changed": 280,
+      "t_attack_s": 0.09,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.8725,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.06699999999999995,
+          "untargeted_asr": 0.07131452900478973,
+          "attack_success": true
+        },
+        "knn1": {
+          "acc_attack": 0.8235,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.11749999999999994,
+          "untargeted_asr": 0.12486716259298612,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.9145,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.029000000000000026,
+          "untargeted_asr": 0.030736618971913116,
+          "attack_success": false
+        },
+        "knn5": {
+          "acc_attack": 0.927,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.014999999999999902,
+          "untargeted_asr": 0.015923566878980788,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7945,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0030000000000000027,
+          "untargeted_asr": 0.0037617554858934204,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "mixed_trap50",
+      "note": "混合：陷阱 200 + 集中翻转 139（ratio=0.5）",
+      "n_modified": 339,
+      "poison_rate": 0.042375,
+      "over_budget": false,
+      "n_label_changed": 339,
+      "n_image_changed": 200,
+      "t_attack_s": 0.1,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.894,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.045499999999999985,
+          "untargeted_asr": 0.048430015965939315,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.849,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.09199999999999997,
+          "untargeted_asr": 0.09776833156216788,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.9175,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.026000000000000023,
+          "untargeted_asr": 0.027556968733439345,
+          "attack_success": false
+        },
+        "knn5": {
+          "acc_attack": 0.9265,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.015499999999999958,
+          "untargeted_asr": 0.016454352441613546,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7945,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0030000000000000027,
+          "untargeted_asr": 0.0037617554858934204,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "mixed_trap85",
+      "note": "混合：陷阱 340 + 集中翻转 0（ratio=0.85）",
+      "n_modified": 340,
+      "poison_rate": 0.0425,
+      "over_budget": false,
+      "n_label_changed": 340,
+      "n_image_changed": 340,
+      "t_attack_s": 0.1,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.873,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.0665,
+          "untargeted_asr": 0.0707823310271421,
+          "attack_success": true
+        },
+        "knn1": {
+          "acc_attack": 0.794,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.1469999999999999,
+          "untargeted_asr": 0.15621679064824645,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.91,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.033499999999999974,
+          "untargeted_asr": 0.03550609432962371,
+          "attack_success": false
+        },
+        "knn5": {
+          "acc_attack": 0.9255,
+          "acc_clean": 0.942,
+          "accuracy_drop": 0.01649999999999996,
+          "untargeted_asr": 0.01751592356687894,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7925,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0050000000000000044,
+          "untargeted_asr": 0.006269592476489034,
+          "attack_success": false
+        }
+      }
+    }
+  ]
+}

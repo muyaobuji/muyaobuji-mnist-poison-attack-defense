@@ -1,0 +1,26 @@
+{
+  "model": "mlp",
+  "acc_clean": 0.9395,
+  "results": {
+    "test_info|held-out(未见过的测试集)": {
+      "acc_clean": 0.946,
+      "acc_attack": 0.9586666666666667,
+      "asr": 0.0
+    },
+    "test_info|基准 test.npz": {
+      "acc_clean": 0.9395,
+      "acc_attack": 0.925,
+      "asr": 0.015433741351782817
+    },
+    "synth|held-out(未见过的测试集)": {
+      "acc_clean": 0.946,
+      "acc_attack": 0.9933333333333333,
+      "asr": 0.0
+    },
+    "synth|基准 test.npz": {
+      "acc_clean": 0.9395,
+      "acc_attack": 0.9365,
+      "asr": 0.0031931878658861125
+    }
+  }
+}

@@ -1,0 +1,340 @@
+{
+  "acc_clean": {
+    "mlp": 0.9395,
+    "centroid": 0.7975,
+    "centroid_std": 0.803,
+    "centroid_std_l2": 0.8065,
+    "knn1": 0.941,
+    "knn3": 0.9435
+  },
+  "eval_models": "mlp,centroid,centroid_std,centroid_std_l2,knn1,knn3",
+  "budget": 400,
+  "seed": 42,
+  "poison_rate": 0.05,
+  "records": [
+    {
+      "method": "random_label_flip",
+      "note": "随机标签翻转 Baseline",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.0,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9265,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.013000000000000012,
+          "untargeted_asr": 0.013837147418839821,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.798,
+          "acc_clean": 0.7975,
+          "accuracy_drop": -0.000500000000000056,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_std": {
+          "acc_attack": 0.8035,
+          "acc_clean": 0.803,
+          "accuracy_drop": -0.0004999999999999449,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_std_l2": {
+          "acc_attack": 0.8075,
+          "acc_clean": 0.8065,
+          "accuracy_drop": -0.0010000000000000009,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.891,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04999999999999993,
+          "untargeted_asr": 0.053134962805525966,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.93,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.013499999999999956,
+          "untargeted_asr": 0.01430842607313191,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "concentrated_n1",
+      "note": "集中式标签翻转 n_src=1 源类=[3] target=nearest",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.06,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9035,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.03600000000000003,
+          "untargeted_asr": 0.03831825439063335,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.794,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0034999999999999476,
+          "untargeted_asr": 0.004388714733542254,
+          "attack_success": false
+        },
+        "centroid_std": {
+          "acc_attack": 0.794,
+          "acc_clean": 0.803,
+          "accuracy_drop": 0.009000000000000008,
+          "untargeted_asr": 0.011207970112079711,
+          "attack_success": false
+        },
+        "centroid_std_l2": {
+          "acc_attack": 0.8075,
+          "acc_clean": 0.8065,
+          "accuracy_drop": -0.0010000000000000009,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8925,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04849999999999999,
+          "untargeted_asr": 0.051540913921360246,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.889,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.05449999999999999,
+          "untargeted_asr": 0.05776364599894011,
+          "attack_success": true
+        }
+      }
+    },
+    {
+      "method": "concentrated_n2",
+      "note": "集中式标签翻转 n_src=2 源类=[3,8] target=nearest",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.06,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.917,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.022499999999999964,
+          "untargeted_asr": 0.023948908994145784,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.795,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0024999999999999467,
+          "untargeted_asr": 0.003134796238244447,
+          "attack_success": false
+        },
+        "centroid_std": {
+          "acc_attack": 0.8005,
+          "acc_clean": 0.803,
+          "accuracy_drop": 0.0025000000000000577,
+          "untargeted_asr": 0.003113325031133322,
+          "attack_success": false
+        },
+        "centroid_std_l2": {
+          "acc_attack": 0.8075,
+          "acc_clean": 0.8065,
+          "accuracy_drop": -0.0010000000000000009,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8995,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.04149999999999998,
+          "untargeted_asr": 0.04410201912858659,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.9125,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.031000000000000028,
+          "untargeted_asr": 0.032856385797562296,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "concentrated_n3",
+      "note": "集中式标签翻转 n_src=3 源类=[3,8,5] target=nearest",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.06,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9285,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.01100000000000001,
+          "untargeted_asr": 0.011708355508249078,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7975,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_std": {
+          "acc_attack": 0.801,
+          "acc_clean": 0.803,
+          "accuracy_drop": 0.0020000000000000018,
+          "untargeted_asr": 0.0024906600249066024,
+          "attack_success": false
+        },
+        "centroid_std_l2": {
+          "acc_attack": 0.8095,
+          "acc_clean": 0.8065,
+          "accuracy_drop": -0.0030000000000000027,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8955,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.045499999999999985,
+          "untargeted_asr": 0.04835281615302868,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.9215,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.02200000000000002,
+          "untargeted_asr": 0.023317435082140986,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "concentrated_n5",
+      "note": "集中式标签翻转 n_src=5 源类=[3,8,5,4,9] target=nearest",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 0,
+      "t_attack_s": 0.06,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.9295,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.010000000000000009,
+          "untargeted_asr": 0.010643959552953709,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.795,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0024999999999999467,
+          "untargeted_asr": 0.003134796238244447,
+          "attack_success": false
+        },
+        "centroid_std": {
+          "acc_attack": 0.7995,
+          "acc_clean": 0.803,
+          "accuracy_drop": 0.0035000000000000586,
+          "untargeted_asr": 0.004358655043586623,
+          "attack_success": false
+        },
+        "centroid_std_l2": {
+          "acc_attack": 0.8085,
+          "acc_clean": 0.8065,
+          "accuracy_drop": -0.0020000000000000018,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.8945,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.046499999999999986,
+          "untargeted_asr": 0.0494155154091392,
+          "attack_success": false
+        },
+        "knn3": {
+          "acc_attack": 0.923,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.020499999999999963,
+          "untargeted_asr": 0.02172760996290404,
+          "attack_success": false
+        }
+      }
+    },
+    {
+      "method": "test_driven_poison",
+      "note": "测试驱动陷阱投毒（400 个, sigma=0.05）",
+      "n_modified": 400,
+      "poison_rate": 0.05,
+      "over_budget": false,
+      "n_label_changed": 400,
+      "n_image_changed": 400,
+      "t_attack_s": 0.04,
+      "models": {
+        "mlp": {
+          "acc_attack": 0.913,
+          "acc_clean": 0.9395,
+          "accuracy_drop": 0.026499999999999968,
+          "untargeted_asr": 0.028206492815327267,
+          "attack_success": false
+        },
+        "centroid": {
+          "acc_attack": 0.7935,
+          "acc_clean": 0.7975,
+          "accuracy_drop": 0.0040000000000000036,
+          "untargeted_asr": 0.005015673981191227,
+          "attack_success": false
+        },
+        "centroid_std": {
+          "acc_attack": 0.8035,
+          "acc_clean": 0.803,
+          "accuracy_drop": -0.0004999999999999449,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "centroid_std_l2": {
+          "acc_attack": 0.8095,
+          "acc_clean": 0.8065,
+          "accuracy_drop": -0.0030000000000000027,
+          "untargeted_asr": 0.0,
+          "attack_success": false
+        },
+        "knn1": {
+          "acc_attack": 0.782,
+          "acc_clean": 0.941,
+          "accuracy_drop": 0.15899999999999992,
+          "untargeted_asr": 0.16896918172157271,
+          "attack_success": true
+        },
+        "knn3": {
+          "acc_attack": 0.8755,
+          "acc_clean": 0.9435,
+          "accuracy_drop": 0.06800000000000006,
+          "untargeted_asr": 0.07207207207207214,
+          "attack_success": true
+        }
+      }
+    }
+  ]
+}
